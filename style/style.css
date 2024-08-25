@@ -1,0 +1,147 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Monstserrat:ital,wght@0,100..900;1,100..900&display=swap');
+:root{
+    --color-hover:#000000;
+    --fuente-monserrat:"Monserrat", sans serif;
+    --fuente-kroma:"kroma", sans serif;
+    --color-terceario:#22D4FD;
+    --color-primario:#000000;
+    --color-secundario:#f6f6f6;
+    
+    }
+*{
+    padding: 0;
+    margin: 0;
+/*se utilizan para eliminar el espacio 
+interno y externo alrededor de un elemento,
+ respectivamente.*/
+}
+body{
+    background-color:var(--color-primario);
+    color:var(--color-secundario);
+    
+    box-sizing: border-box;
+}
+.header{
+padding: 2% 0% 0% 15%;
+
+}
+.header__menu{
+display: flex;
+gap: 80px
+
+
+}
+
+.header__menu__link{
+   font-family: var(--fuente-monserrat);
+   font-size: 1.5rem;
+   font-weight: 600;
+    color:var(--color-terceario);
+    text-decoration: none;/*quitar decoracion tipo subrayado y eso*/
+    
+}
+.presentacion{
+    padding: 7% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 82px;/*crear un espacio entre objetos*/
+}
+.presentacion__contenido{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.presentacion__contenido__titulo{
+    font-size:2.25rem;
+    font-family: var(--fuente-kroma);
+}
+.titulo-destaque{
+    color:var(--color-terceario); 
+}
+.presentacion__contenido__texto{
+    font-family: var(--fuente-monserrat);
+    font-size: 1.5rem;
+}
+.presentacion__enlaces{
+    display: flex;/*convierte un contenedor en un contenedor 
+    flexbox, lo que permite que sus elementos hijos se distribuyan 
+    y alineen de manera flexible dentro del contenedor*/
+
+justify-content: space-between; /* se utiliza dentro de un 
+contenedor flexbox para distribuir el espacio entre los elementos
+ flexibles a lo largo del eje principal del contenedor, con el primer y 
+el último elemento alineados a los bordes del contenedor.*/
+
+    flex-direction: column; /*Se utiliza para definir la dirección en la que los elementos 
+                            flexibles se organizan dentro de un contenedor flexbox*/
+    align-items: center ;
+    gap: 32px;/*definir el espacio entre elementos en un contenedor
+                 que usa un diseño de grid o flexbox.*/
+}
+.presentacion_enlaces_subtitulo{
+    font-family: var(--fuente-kroma);
+    font-size: 1.5rem;
+    font-weight: 400;
+
+}
+.presentacion__enlaces__link{
+    width: 50%;/*para definir el ancho de un elemento.*/
+    text-align: center;/*linear el texto horizontalmente 
+                        dentro de un elemento. En este caso, el valor center hace que el 
+                        texto se alinee en el centro del elemento contenedor.*/
+    
+    padding: 21.5px 0;/*agregar espacio (relleno) dentro de un 
+                        elemento, entre su contenido y su borde.*/
+
+    border-radius: 8px;/*se utiliza para redondear las esquinas de un elemento*/
+    font-family: var(--fuente-monserrat); /*tipo de letra previamente instanciada o llamada*/
+    font-size: 1.5rem;/*tamaño de letra*/
+    font-weight:600 ;/*es una propiedad de CSS que se usa para definir
+                    el grosor o la "pesadez" de una fuente en 
+                    un elemento de texto.*/
+    text-decoration: none;
+    color:var(--color-secundario);/*color de la letra*/
+    border: 2px solid var(--color-terceario); /*generar un borde*/
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.presentacion__enlaces__link:hover{/*el hover permite que al pasarle el cursor ensima el texto se resalte*/
+    background-color:var(--color-hover);
+
+}
+.presentacion__imagen{
+    width: 50%;
+}
+.footer{
+    background-color: var(--color-terceario);
+    padding: 24px;
+    color: var(--color-primario);
+    text-align: center;
+    font-family:var(--fuente-monserrat);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+@media (max-width:1200px ){/*aca se pone el limite (este metodo sirve para ponerlo para distintas pantallas*/
+
+    /*LUEGO ACA SE PONE LO QUE SE PASARA CUANDO SOBREPASE EL LIMITE*/
+.header{
+    padding: 10%;
+}
+.header__menu{
+    justify-content: center;
+}
+.presentacion{
+    flex-direction: column-reverse;/*reversa lo que habiamos hecho creo que dfijo*/
+    padding: 5% ;
+}
+.presentacion__contenido{
+    width: auto;/*permite que el contenido se adapte al tamaño que tenemos siempre se adaptara al
+      elemento que tengamos otra opcion para movil es ponerlo al width:100%*/
+}
+}
+    
